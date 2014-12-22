@@ -1,0 +1,45 @@
+#slide1 .sample-card{
+	width:100%;
+	margin: 0px auto;
+}
+
+#slide1 .sample-card .pic{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+#slide1 .sample-card .pic-info{
+	padding: 5px 0px;
+	color: #666;
+}
+
+#slide1 .sample-card:hover .pic{
+	opacity: 0.8;
+}
+
+#slide1 .customize-page-text{
+	float: left;
+	color: #666;
+	margin-top: -24px;
+	background-color: #1a1a1a;
+	padding: 0px 10px;
+	color: #fff;
+	font-size: 12px;
+}
+
+#slide2 .sample-card{
+	position: relative;
+}
+
+#slide2 .sample-card .caption{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 3px 0px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	color: #aaa;
+	width: 100%;
+}

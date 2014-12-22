@@ -1,0 +1,17 @@
+.plugin-opt-table{
+	background-color: #fff;
+	font-weight: 600;
+}
+
+.plugin-opt-table thead th{
+	font-weight: bold;
+	background-color: #efefef;
+	color: #666;
+}
+.plugin-opt-table tbody tr td:first-child{
+	color: green;
+}
+
+.plugin-opt-table tbody tr td .sumup{
+	color: #999;
+}

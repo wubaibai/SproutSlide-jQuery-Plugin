@@ -1,10 +1,7 @@
 SproutSlide-jQuery-Plugin
 =========================
 
-SproutSlide is a jQuery plugin，可以藉由 CSS 簡單修改成你所想要的模樣。
-
-# SproutSlide-jQuery-Plugin
-A simple, responsive, touch-enabled slider. SproutSlider is very easy to customize into yout website.
+SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
 
 ### Version
 * v2.1

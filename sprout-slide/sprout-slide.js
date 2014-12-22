@@ -1,6 +1,7 @@
 /*--------------------------------------------
 * @ SproutSlide-jQuery-Plugin
 * @ version 2.1.0
+This is git testing
 --------------------------------------------*/
 
 $.fn.hasAttr = function(name) {  

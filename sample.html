@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- jQuery is the GOD -->
+	<script type="text/javascript" src="http://lab.25sprout.com/library/jquery/jquery-1.9.0.min.js"></script>
+
+	<!-- KEY FEATURE SPROUT SLIDE -->
+	<script type="text/javascript" src="sprout-slide/sprout-slide.js"></script>
+	<script type="text/javascript" src="sprout-slide/jquery.touchSwipe.js"></script>
+	<link type="text/css" rel="stylesheet" href="sprout-slide/sprout-slide.css">
+	<link type="text/css" rel="stylesheet" href="sprout-slide/sample.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#slide1').sproutSlide({
+				animateStyle: "slide",
+				width: "auto",
+				slideNum: 3,
+				duration:700,
+				autovalue:true,
+				interval:4000,
+				enableDot:true,
+				enableArrow:true,
+				enableLoop:false,
+				enablePageNo:true,
+				hoverShowArrow:false,
+				onInit:function(slider,current,total){
+					slider.find('.customize-page-text').html('IMAGES: '+(current+1)+' / '+total);
+				},
+				beforeAnimate:function(slider,current,total){
+					slider.find('.customize-page-text').html('IMAGES: '+(current+1)+' / '+total);
+				}
+			});
+			
+			$('#slide2').sproutSlide({
+				animateStyle: "fade",
+				width: 720,
+				duration:500,
+				autovalue:false,
+				interval:5000,
+				enableDot:true,
+				enableArrow:true,
+				enablePageNo:false,
+				hoverShowArrow:true,
+				clickToNext:true
+			});
+		});
+	</script>
+</head>
+
+<body style="background:#eee;">
+
+	<div style="width:1000px; margin:10px auto;">
+<h2 >Sample 1</h2>
+		<div class="sprout-slide-container" id="slide1">
+			<div class="sprout-slide-wrapper">
+				<ul class="sprout-slide">
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample1.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample2.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample3.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample4.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample5.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample6.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<a class="pic" href="https://unsplash.com/joshuaearle" target="_blank"><img src="images/sample7.jpg"></a>
+							<div class="pic-info">joshuaearle</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="sprout-arrow">
+				<div class="sprout-prev"></div>
+				<div class="sprout-next"></div>
+			</div>
+			<div class="sprout-dots">
+			</div>
+			<div class="customize-page-text"></div>
+		</div>
+
+<pre class="prettyprint linenums">
+$('#slide1').sproutSlide({
+	animateStyle: "slide",
+	width: "auto",
+	slideNum: 3,
+	duration:700,
+	autovalue:true,
+	interval:4000,
+	enableDot:true,
+	enableArrow:true,
+	enableLoop:false,
+	enablePageNo:true,
+	hoverShowArrow:false,
+	onInit:function(slider,current,total){
+		slider.find('.customize-page-text').html('IMAGES: '+(current+1)+' / '+total);
+	},
+	beforeAnimate:function(slider,current,total){
+		slider.find('.customize-page-text').html('IMAGES: '+(current+1)+' / '+total);
+	}
+});
+</pre>
+		<hr>
+		<h2 >Sample 2</h2>
+		<div class="sprout-slide-container" id="slide2">
+			<div class="sprout-slide-wrapper">
+				<ul class="sprout-slide">
+					<li>
+						<div class="sample-card">
+							<img src="images/sample1.jpg">
+							<div class="caption">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample2.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample3.jpg">
+							<div class="caption">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample4.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample5.jpg">
+							<div class="caption">joshuaearle</div>
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample6.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="sample-card">
+							<img src="images/sample7.jpg">
+							<div class="caption">joshuaearle</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="sprout-arrow">
+				<div class="sprout-prev"></div>
+				<div class="sprout-next"></div>
+			</div>
+			<div class="sprout-dots">
+			</div>
+		</div>
+
+<pre class="prettyprint linenums">
+$('#slide2').sproutSlide({
+	animateStyle: "fade",
+	width: 720,
+	duration:500,
+	autovalue:true,
+	interval:5000,
+	enableDot:true,
+	enableArrow:true,
+	enablePageNo:false,
+	hoverShowArrow:true,
+	clickToNext:true
+});
+</pre>
+</body>
+</html>

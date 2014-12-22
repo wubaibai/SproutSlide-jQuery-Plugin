@@ -13,8 +13,8 @@
 	<?php include("../source/source_head.php"); ?>
 
 	<!-- HTML meta 設定（必填） -->
-	<meta name="description" content="請輸入網站描述">
-	<meta name="keywords" content="HTML, attribute, table, clean." />
+	<meta name="description" content="SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.">
+	<meta name="keywords" content="Swipe, gesture, slider, easy, simple, customize, mobile, image, infinite, fade." />
 	<meta name="URL" content="http://lab.25sprout.com/sproutSlide2/">
 	<meta name="image" content="http://lab.25sprout.com/images/share-image.jpg" />
 
@@ -22,11 +22,11 @@
 	<meta property="og:locale" content="zh_TW" />
 	<meta property="og:url" content="http://lab.25sprout.com/sproutSlide2/" />
 	<meta property="og:type" content="Website" />
-	<meta property="og:description" content="support 'mutiple slide' 'pagenation' 'next & previous' 'autoplay' feature." />
+	<meta property="og:description" content="support 'mutiple slide' 'pagenation' 'next' 'previous' 'autoplay' feature." />
 	<meta property="og:image" content="http://lab.25sprout.com/images/share-image.jpg" />
 
 	<!-- 網站標題 -->
-	<title>Sprout Slide 2.0 » 25sprout LAB</title>
+	<title>SproutSlide-jQuery-Plugin » 25sprout LAB</title>
 
 	<!-- Lab 共用的 CSS -->
 	<link type="text/css" rel="stylesheet" href="http://lab.25sprout.com/css/lab_site.css">
@@ -42,7 +42,6 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			//自己這個站的 js
 			$('#slide1').sproutSlide({
 				animateStyle: "slide",
 				width: "auto",
@@ -52,6 +51,7 @@
 				interval:4000,
 				enableDot:true,
 				enableArrow:true,
+				enableLoop:false,
 				enablePageNo:true,
 				hoverShowArrow:false,
 				onInit:function(slider,current,total){
@@ -66,7 +66,7 @@
 				animateStyle: "fade",
 				width: 720,
 				duration:500,
-				autovalue:true,
+				autovalue:false,
 				interval:5000,
 				enableDot:true,
 				enableArrow:true,
@@ -85,7 +85,7 @@
 	<?php include("../source/header.php"); ?>
 
 	<div class="lab-name">
-		Sprout Slide 2.0
+		SproutSlide-jQuery-Plugin
 	</div>
 	<div class="lab-detail">
 		support 'mible swipe gesture' 'mutiple slide' 'pagenation' 'next & previous' 'autoplay' 'Infinite Scroll' feature.
@@ -96,7 +96,6 @@
 
 	<div class="content-container">
 
-		<!-- 內容從這裡開始 -->
 		<h2 >Sample 1</h2>
 		<div class="sprout-slide-container" id="slide1">
 			<div class="sprout-slide-wrapper">
@@ -164,6 +163,7 @@ $('#slide1').sproutSlide({
 	interval:4000,
 	enableDot:true,
 	enableArrow:true,
+	enableLoop:false,
 	enablePageNo:true,
 	hoverShowArrow:false,
 	onInit:function(slider,current,total){
@@ -303,16 +303,16 @@ $('#slide2').sproutSlide({
 					<td>animateStyle</td>
 					<td>"slide"</td>
 					<td><p class="sumup">The style of slider</p>
-						"slide" : The Slider will slide Left and Right to animate.<br/>
-						"fade" : The Slider will fade in or fade out to animate.
+						<span class="blue">"slide"</span> : The Slider will slide Left and Right to animate.<br/>
+						<span class="blue">"fade"</span> : The Slider will fade in or fade out to animate.
 					</td>
 				</tr>
 				<tr>
 					<td>width</td>
 					<td>"auto"</td>
 					<td><p class="sumup">The width of slider content</p>
-						"auto" : The Slider will fit container's width.<br/>
-						digits : The Slider will set to specific width.
+						<span class="blue">"auto"</span> : The Slider will fit container's width.<br/>
+						<span class="blue">digits</span> : The Slider will set to specific width.
 					</td>
 				</tr>
 				<tr>
@@ -325,12 +325,12 @@ $('#slide2').sproutSlide({
 				<tr>
 					<td>duration</td>
 					<td>700</td>
-					<td>The Animation duration.</td>
+					<td>The Animation duration(ms).</td>
 				</tr>
 				<tr>
 					<td>autovalue</td>
 					<td>true</td>
-					<td>Set to true, the slider will autoplay to next automatically.</td>
+					<td>Set to <span class="blue">true</span>, the slider will autoplay to next automatically.</td>
 				</tr>
 				<tr>
 					<td>interval</td>
@@ -360,14 +360,22 @@ $('#slide2').sproutSlide({
 					<td>Show the page number in dots or not.</td>
 				</tr>
 				<tr>
+					<td>enableLoop</td>
+					<td>true</td>
+					<td><p class="sumup">Make the Slider infinite scroll, if set to <span class="blue">false</span> : </p>
+						The prev button will hide at page first.<br/>
+						The next button will hide at page end.
+					</td>
+				</tr>
+				<tr>
 					<td>hoverShowArrow</td>
 					<td>false</td>
-					<td>Set to true will hide the arrow when initial the slide,<br/>but fadeIn when you hover in the slide.</td>
+					<td>Set to <span class="blue">true</span> will hide the arrow when initial the slide,<br/>but fadeIn when you hover in the slide.</td>
 				</tr>
 				<tr>
 					<td>clickToNext</td>
 					<td>false</td>
-					<td>Set to true will trigger next slide when you click on the slider,<br/>and cursor will be set to pointer.</td>
+					<td>Set to <span class="blue">true</span> will trigger next slide when you click on the slider,<br/>and cursor will be set to pointer.</td>
 				</tr>
 			</tbody>
 			<thead>
@@ -381,9 +389,9 @@ $('#slide2').sproutSlide({
 					<td>false</td>
 					<td><p class="sumup">The callback function after slider initial</p>
 						<ul>
-							<li>slider : will return the slider itself.</li>
-							<li>current : will return the current page number start form 0 ~ (total-1).</li>
-							<li>total : will return the slider page count.</li>
+							<li><span class="blue">slider</span> : will return the slider itself.</li>
+							<li><span class="blue">current</span> : will return the current page number start form 0 ~ (total-1).</li>
+							<li><span class="blue">total</span> : will return the slider page count.</li>
 						</ul>
 <pre class="prettyprint linenums">
 onInit:function(slider,current,total){
@@ -398,9 +406,9 @@ onInit:function(slider,current,total){
 					<td><p class="sumup">The callback function before each slider animation.</p>
 						EX: before next action, before previous action, before dot action.
 						<ul>
-							<li>slider : will return the slider itself.</li>
-							<li>current : will return the current page number start form 0 ~ (total-1).</li>
-							<li>total : will return the slider page count.</li>
+							<li><span class="blue">slider</span> : will return the slider itself.</li>
+							<li><span class="blue">current</span> : will return the current page number start form 0 ~ (total-1).</li>
+							<li><span class="blue">total</span> : will return the slider page count.</li>
 						</ul>
 <pre class="prettyprint linenums">
 beforeAnimate:function(slider,current,total){
@@ -415,9 +423,9 @@ beforeAnimate:function(slider,current,total){
 					<td><p class="sumup">The callback function after each slider animation.</p>
 						EX: after next action, after previous action, after dot action.
 						<ul>
-							<li>slider : will return the slider itself.</li>
-							<li>current : will return the current page number start form 0 ~ (total-1).</li>
-							<li>total : will return the slider page count.</li>
+							<li><span class="blue">slider</span> : will return the slider itself.</li>
+							<li><span class="blue">current</span> : will return the current page number start form 0 ~ (total-1).</li>
+							<li><span class="blue">total</span> : will return the slider page count.</li>
 						</ul>
 <pre class="prettyprint linenums">
 afterAnimate:function(slider,current,total){

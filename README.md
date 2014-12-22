@@ -4,20 +4,20 @@ SproutSlide-jQuery-Plugin
 SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
 
 ### Version
-* v2.1
+* v2.1.0
   * [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
   * [View the Sample](http://lab.25sprout.com/sproutSlide2/).
 
 ### Changelog
 
-* v2.1 - Dec 22, 2014
+* v2.1.0 - Dec 22, 2014
   * ADD more function and fade style.
   * ADD Callback after and before animation.
-* v2.0 - Jul 23, 2014
+* v2.0.0 - Jul 23, 2014
   * Fixed only 2 page wired animation.
-* v2.0 - May 31, 2014
+* v2.0.0 - May 31, 2014
   * support Mobile Swipe Gesture.
-* v2.0 - Dec 29, 2013
+* v2.0.0 - Dec 29, 2013
   * NEW Version Sprout Slide Release. With Infinite Scroll Feature!!!
 
 

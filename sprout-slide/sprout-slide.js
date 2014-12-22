@@ -1,3 +1,8 @@
+/*--------------------------------------------
+* @ SproutSlide-jQuery-Plugin
+* @ version 2.1.0
+--------------------------------------------*/
+
 $.fn.hasAttr = function(name) {  
    return this.attr(name) !== undefined;
 };
@@ -16,6 +21,7 @@ $.fn.sproutSlide = function(options) {
 			enableDot:true,
 			enableArrow:true,
 			enablePageNo:false,
+			enableLoop:true,
 			hoverShowArrow:false,
 			clickToNext:false,
 			onInit:false,
@@ -35,6 +41,7 @@ $.fn.sproutSlide = function(options) {
 			var enableDot = settings.enableDot;
 			var enableArrow = settings.enableArrow;
 			var enablePageNo = settings.enablePageNo;
+			var enableLoop = settings.enableLoop;
 			var hoverShowArrow = settings.hoverShowArrow;
 			slider.addClass('animate-'+animateStyle);
 
@@ -76,25 +83,14 @@ $.fn.sproutSlide = function(options) {
 				var sliderH = 0;
 				var pageNum = slider.find('.sprout-slide > li').length;
 
-				// var enablePage = settings.enablePage;
-				// var enableCaption = settings.enableCaption;
-
-				//hide all pic and caption AND fadefirst;
-				slider.hide(); //覺得先隱藏有點慢;
+				slider.hide();
 				slider.find('.sprout-slide li').css('display','none');
 				slider.find('.sprout-slide li').eq(0).css('display','block');
 
-				//Initial Layout
-				// if(enableCaption){
-				// 	captionText = slider.find('.sprout-slide li').eq(0).attr('caption');
-				// 	slider.find('.sprout-caption > div').html(captionText);
-				// }
 				slider.delay(0).fadeIn(100,function(){
 					sliderH = slider.find('.sprout-slide li').eq(0).height();
 					mainContent.height(sliderH);
 				});
-
-				// slider.find('.sprout-page .total').html(pageNum); ADD ONS
 			}
 
 			//清空 舊的 page li
@@ -141,6 +137,10 @@ $.fn.sproutSlide = function(options) {
 					}
 				};
 				slider.find('.sprout-dots div').eq(0).addClass('active');	//Active First dots
+
+				if(!enableLoop){
+					checkArrowDisplay();
+				}
 
 				if(hoverShowArrow){
 					if(enableDot){
@@ -199,6 +199,19 @@ $.fn.sproutSlide = function(options) {
 
 			if($.isFunction( settings.onInit )){
 				settings.onInit.call(this,slider,currentDot,pageNum);
+			}
+
+			function checkArrowDisplay(){
+				if(currentDot == 0){
+					slider.find('.sprout-prev').hide();
+				} else{
+					slider.find('.sprout-prev').show();
+				}
+				if(currentDot == pageNum-1){
+					slider.find('.sprout-next').hide();
+				} else{
+					slider.find('.sprout-next').show();
+				}
 			}
 
 			function nextClick(){
@@ -287,6 +300,8 @@ $.fn.sproutSlide = function(options) {
 						var left_indent = parseInt(mainContent.css('margin-left')) - width;
 					}
 
+					checkArrowDisplay();
+
 					if($.isFunction( settings.beforeAnimate )){
 						settings.beforeAnimate.call(this,slider,currentDot,pageNum);
 					}
@@ -349,9 +364,10 @@ $.fn.sproutSlide = function(options) {
 					
 					sliderH = slider.find('.sprout-slide li').eq(nextPage).height();
 					mainContent.animate({'height':sliderH},500);
-					
+
 					slider.find('.sprout-slide li').eq(currentDot).fadeOut(300).end().eq(nextPage).hide().fadeIn(duration, function(){
 						currentDot = nextPage;
+						checkArrowDisplay();
 
 						slider.find('.sprout-next').bind("click",nextClick);
 						slider.find('.sprout-prev').bind("click",prevClick);

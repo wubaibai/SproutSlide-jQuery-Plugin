@@ -20,6 +20,7 @@
 	list-style-type: none;
 	margin:0px !important;
 	padding:0px !important;
+	line-height: 0px;
 }
 
 .sprout-slide-container.animate-slide ul li{

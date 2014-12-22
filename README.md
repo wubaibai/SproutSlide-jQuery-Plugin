@@ -21,15 +21,15 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
   * NEW Version Sprout Slide Release. With Infinite Scroll Feature!!!
 
 
-# In This Documentation
+## In This Documentation
 
 1. [Getting Started](#getting-started)
 2. [Options & Settings](#options-and-settings)
 
 
-## Getting Started
+### Getting Started
 
-### 1. Include SproutSlider on your site.
+#### 1. Include SproutSlider on your site.
 
 ```html
 <!-- Don't forgot jquery, if your site already have it, it's no need to include again.-->
@@ -43,7 +43,7 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
 
 SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin) to detect mobile gesture.
 
-### 2. Add the markup to your HTML.
+#### 2. Add the markup to your HTML.
 
 ```html
 <!-- YOU CAN MODIFY ID "slide1" -->
@@ -68,7 +68,7 @@ SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe
 `[sprout-dots]` will dynamically add navigation elements and slide position content to them.
 
 
-### 3. Initialize Slider.
+#### 3. Initialize Slider.
 
 ```html
 <script type="text/javascript">
@@ -79,7 +79,7 @@ SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe
 ```
 
 
-## Options and Settings
+### Options and Settings
 
 Please check document at [SproutSlide-jQuery-Plugin](http://lab.25sprout.com/sproutSlide2/).
 

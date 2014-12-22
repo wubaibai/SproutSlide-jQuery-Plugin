@@ -95,19 +95,6 @@
 	<!-- 上方的 header 全站統一 END-->
 
 	<div class="content-container">
-		<br/>
-		<div class="alert alert-info">
-			<dl class="dl-horizontal">
-				<dt>2014-12-22</dt>
-				<dd>ADD more function and fade style.</dd>
-				<dt>2014-07-23</dt>
-				<dd>Fixed only 2 page wired animation.</dd>
-				<dt>2014-05-31</dt>
-				<dd>support Mobile Swipe Gesture.</dd>
-				<dt>2013-12-29</dt>
-				<dd>NEW Version Sprout Slide Release. With Infinite Scroll Feature!!!</dd>
-			</dl>
-		</div>
 
 		<!-- 內容從這裡開始 -->
 		<h2 >Sample 1</h2>

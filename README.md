@@ -1,25 +1,38 @@
 SproutSlide-jQuery-Plugin
 =========================
 
-SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
+> SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
+
+
+----------
+
 
 ### Version
-* v2.1.0
-  * [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
-  * [View the Sample](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
+v2.1.0
+:   [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
+:   [View the Sample](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
+
+
+----------
+
 
 ### Changelog
 
-* v2.1.0 - Dec 22, 2014
-  * ADD more function and fade style.
-  * ADD Callback after and before animation.
-* v2.0.0 - Jul 23, 2014
-  * Fixed only 2 page wired animation.
-* v2.0.0 - May 31, 2014
-  * support Mobile Swipe Gesture.
-* v2.0.0 - Dec 29, 2013
-  * NEW Version Sprout Slide Release. With Infinite Scroll Feature!!!
+v2.1.0 - Dec 22, 2014
+:   ADD more function and fade style.
+:   ADD Callback after and before animation.
 
+v2.0.0 - Jul 23, 2014
+:   Fixed only 2 page wired animation.
+
+v2.0.0 - May 31, 2014
+:   support Mobile Swipe Gesture.
+
+v2.0.0 - Dec 29, 2013
+:   NEW Version Sprout Slide Release. With Infinite Scroll Feature!!!
+
+
+----------
 
 ## In This Documentation
 
@@ -27,9 +40,13 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
 2. [Options & Settings](#options-and-settings)
 
 
+----------
+
+
 ### Getting Started
 
 #### 1. Include SproutSlider on your site.
+> **Note:** SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin) to detect mobile gesture.
 
 ```html
 <!-- Don't forgot jquery, if your site already have it, it's no need to include again.-->
@@ -41,9 +58,11 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
 <link type="text/css" rel="stylesheet" href="sprout-slide/sprout-slide.css">
 ```
 
-SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin) to detect mobile gesture.
 
 #### 2. Add the markup to your HTML.
+> **Note:** 
+> `[sprout-slide-container]` 's `id` is changeable, you also can use class instead. 
+>`[sprout-dots]` will dynamically add navigation elements and slide position content to them.
 
 ```html
 <!-- YOU CAN MODIFY ID "slide1" -->
@@ -63,9 +82,6 @@ SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe
 </div>
 ```
 
-`[sprout-slide-container]` 's `id` is changeable, you also can use class instead.
-
-`[sprout-dots]` will dynamically add navigation elements and slide position content to them.
 
 
 #### 3. Initialize Slider.
@@ -79,8 +95,11 @@ SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe
 ```
 
 
+----------
+
+
 ### Options and Settings
 
-Please check document at [SproutSlide-jQuery-Plugin](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
+> Please check document at [SproutSlide-jQuery-Plugin](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
 
 

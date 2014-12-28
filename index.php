@@ -95,7 +95,8 @@
 	<!-- 上方的 header 全站統一 END-->
 
 	<div class="content-container">
-		<a href="https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip" class="btn btn-inverse btn-large f-right"> <i class="fa fa-github" style="font-size:24px; margin-right:10px;"></i> Download From Github</a>
+		<a href="https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip" style="margin-right:10px;" class="btn btn-inverse f-right" target="_blank"> <i class="fa fa-github" style="font-size:24px; vertical-align:middle; margin-right:8px;"></i> Download From Github</a>
+		<a href="https://github.com/wubaibai/SproutSlide-jQuery-Plugin/" style="margin-right:10px;" class="btn f-right" target="_blank"> <i class="fa fa-github" style="font-size:24px; vertical-align:middle; margin-right:8px;"></i> Check At Github</a>
 		<div class="clear-both"></div>
 		<h2 >Sample 1</h2>
 		<div class="sprout-slide-container" id="slide1">

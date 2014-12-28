@@ -6,7 +6,7 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
 ### Version
 * v2.1.0
   * [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
-  * [View the Sample](http://lab.25sprout.com/sproutSlide2/).
+  * [View the Sample](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
 
 ### Changelog
 
@@ -81,6 +81,6 @@ SproutSlider included [`touchswipe.js`](https://github.com/mattbryson/TouchSwipe
 
 ### Options and Settings
 
-Please check document at [SproutSlide-jQuery-Plugin](http://lab.25sprout.com/sproutSlide2/).
+Please check document at [SproutSlide-jQuery-Plugin](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
 
 

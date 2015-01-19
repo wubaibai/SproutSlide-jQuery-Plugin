@@ -30,6 +30,14 @@
 					slider.find('.customize-page-text').html('IMAGES: '+(current+1)+' / '+total);
 				}
 			});
+
+			$('#slide3').sproutSlide({
+				'width': 1020,
+		        'slideNum': 3,
+		        'duration':700,
+		        'autovalue':false,
+		        'interval':4000
+			});
 			
 			$('#slide2').sproutSlide({
 				animateStyle: "fade",
@@ -196,5 +204,32 @@ $('#slide2').sproutSlide({
 	clickToNext:true
 });
 </pre>
+
+
+	<div class="sprout-slide-container" id="slide3">
+			<div class="sprout-slide-wrapper">
+				<ul class="sprout-slide">
+					<li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-01.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">LEXUS-GS-300</h3><h5 class="car-type georgia">標準</h5><h5 class="car-result">目前共有 <span class="people-check red">22</span> 人搜尋過此車</h5></div></div></li><li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-02.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">VOLKSWAGEN-TIGUAN</h3><h5 class="car-type georgia">TSI</h5><h5 class="car-result">目前共有 <span class="people-check red">8</span> 人搜尋過此車</h5></div></div></li><li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-03.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">M-BENZ-E-CLASS COUPE C207</h3><h5 class="car-type georgia">350 AVANTGARDE</h5><h5 class="car-result">目前共有 <span class="people-check red">8</span> 人搜尋過此車</h5></div></div></li><li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-01.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">AUDI-Q5</h3><h5 class="car-type georgia">TDI Quattro</h5><h5 class="car-result">目前共有 <span class="people-check red">7</span> 人搜尋過此車</h5></div></div></li><li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-02.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">VOLKSWAGEN-PASSAT</h3><h5 class="car-type georgia">L</h5><h5 class="car-result">目前共有 <span class="people-check red">7</span> 人搜尋過此車</h5></div></div></li><li class="cursor-item"><div class="pop-carphoto-outer"><div class="pop-carphoto-wrap"><img src="images/index/car-03.jpg" class="img-circle"></div><div class="pop-car-intro"><h3 class="car-brand georgia">AUDI-A4 AVANT</h3><h5 class="car-type georgia">QUATTRO</h5><h5 class="car-result">目前共有 <span class="people-check red">6</span> 人搜尋過此車</h5></div></div></li>
+				</ul>
+			</div>
+			<div class="sprout-arrow">
+				<div class="sprout-prev"></div>
+				<div class="sprout-next"></div>
+			</div>
+			<div class="sprout-dots">
+			</div>
+			<div class="customize-page-text"></div>
+		</div>
+
+<pre class="prettyprint linenums">
+$('#slide3').sproutSlide({
+	'width': 1020,
+	'slideNum': 3,
+	'duration':700,
+	'autovalue':false,
+	'interval':4000
+});
+</pre>
+
 </body>
 </html>

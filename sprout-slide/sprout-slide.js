@@ -186,6 +186,7 @@ $.fn.sproutSlide = function(options) {
 
 			//mobile touch slide
 			slider.swipe({
+				allowPageScroll:'auto',
 				swipe:function(event, direction, distance, duration, fingerCount) {
 					//alert("You swiped " + direction);  
 					if (direction == 'left'){

@@ -139,9 +139,7 @@ $.fn.sproutSlide = function(options) {
 				};
 				slider.find('.sprout-dots div').eq(0).addClass('active');	//Active First dots
 
-				if(!enableLoop){
-					checkArrowDisplay();
-				}
+				checkArrowDisplay();
 
 				if(hoverShowArrow){
 					if(enableDot){
@@ -204,15 +202,17 @@ $.fn.sproutSlide = function(options) {
 			}
 
 			function checkArrowDisplay(){
-				if(currentDot == 0){
-					slider.find('.sprout-prev').hide();
-				} else{
-					slider.find('.sprout-prev').show();
-				}
-				if(currentDot == pageNum-1){
-					slider.find('.sprout-next').hide();
-				} else{
-					slider.find('.sprout-next').show();
+				if(!enableLoop){
+					if(currentDot == 0){
+						slider.find('.sprout-prev').hide();
+					} else{
+						slider.find('.sprout-prev').show();
+					}
+					if(currentDot == pageNum-1){
+						slider.find('.sprout-next').hide();
+					} else{
+						slider.find('.sprout-next').show();
+					}
 				}
 			}
 

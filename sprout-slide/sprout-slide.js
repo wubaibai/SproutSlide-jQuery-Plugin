@@ -185,6 +185,17 @@ $.fn.sproutSlide = function(options) {
 			//mobile touch slide
 			mainContent.swipe({
 				allowPageScroll:'auto',
+				tap:function(event, target) {
+					if($(target).parent('a').length != 0){
+						var clickHref = $(target).parent('a').attr('href');
+						var clickTarget = $(target).parent('a').attr('target');
+						if(clickTarget == '_blank'){
+							window.open(clickHref,clickTarget);
+						} else {
+							location.href = clickHref;
+						}
+					}
+				},
 				swipe:function(event, direction, distance, duration, fingerCount) {
 					// alert("You swiped " + direction);  
 					if (direction == 'left'){

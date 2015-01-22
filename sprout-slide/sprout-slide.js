@@ -185,17 +185,20 @@ $.fn.sproutSlide = function(options) {
 			//mobile touch slide
 			mainContent.swipe({
 				allowPageScroll:'auto',
-				tap:function(event, target) {
-					if($(target).parent('a').length != 0){
-						var clickHref = $(target).parent('a').attr('href');
-						var clickTarget = $(target).parent('a').attr('target');
-						if(clickTarget == '_blank'){
-							window.open(clickHref,clickTarget);
-						} else {
-							location.href = clickHref;
-						}
-					}
-				},
+				// tap:function(event, target) {
+				// 	if($(target).parent('a').length != 0){
+				// 		var clickHref = $(target).parent('a').attr('href');
+				// 		var clickTarget = $(target).parent('a').attr('target');
+				// 		if(clickTarget == '_blank'){
+				// 			window.open(clickHref,clickTarget);
+				// 		} else {
+				// 			location.href = clickHref;
+				// 		}
+				// 	}
+				// },
+				click: function(event, target) {
+                    $(target).trigger('click');
+                },
 				swipe:function(event, direction, distance, duration, fingerCount) {
 					// alert("You swiped " + direction);  
 					if (direction == 'left'){
@@ -204,7 +207,7 @@ $.fn.sproutSlide = function(options) {
 						animateSlide('left');
 					}
 				},
-				excludedElements:[],
+                excludedElements:"button, input, select, textarea, .noSwipe",
 				threshold:75  	//Default is 75px, set to 0 for demo so any distance triggers swipe
 			});
 

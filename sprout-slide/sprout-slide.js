@@ -1,6 +1,6 @@
 /*--------------------------------------------
 * @ SproutSlide-jQuery-Plugin
-* @ version 2.1.0
+* @ version 2.1.2
 This is git testing
 --------------------------------------------*/
 
@@ -52,7 +52,7 @@ $.fn.sproutSlide = function(options) {
 			} else {
 				width = parseInt(width)
 			}
-			slider.css('width', width);
+			// slider.css('width', width); // MOD 1/21
 			slider.find('.sprout-slide-wrapper').css('width', width);
 
 			if (animateStyle == 'slide'){
@@ -183,10 +183,10 @@ $.fn.sproutSlide = function(options) {
 			slider.find('.sprout-dots div').unbind("click").bind("click",dotsClick);
 
 			//mobile touch slide
-			slider.swipe({
+			mainContent.swipe({
 				allowPageScroll:'auto',
 				swipe:function(event, direction, distance, duration, fingerCount) {
-					//alert("You swiped " + direction);  
+					// alert("You swiped " + direction);  
 					if (direction == 'left'){
 						animateSlide('right');
 					} else if (direction == 'right'){
@@ -217,11 +217,11 @@ $.fn.sproutSlide = function(options) {
 			}
 
 			function nextClick(){
-				//console.debug('right');
+				// console.debug('right');
 				animateSlide('right');
 			}
 			function prevClick(){
-				//console.debug('left');
+				// console.debug('left');
 				animateSlide('left');
 			}
 			function dotsClick(){

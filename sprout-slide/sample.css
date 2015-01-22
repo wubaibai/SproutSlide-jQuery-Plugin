@@ -32,6 +32,10 @@
 	font-size: 12px;
 }
 
+#slide2{
+	width: 780px;
+}
+
 #slide2 .sample-card{
 	position: relative;
 }

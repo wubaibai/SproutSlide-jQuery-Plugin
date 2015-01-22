@@ -10,6 +10,9 @@ SproutSlide is a simple jQuery plugin, it is very easy to customize into yout we
 
 ### Changelog
 
+* v2.1.2 - Jan 21, 2015
+  * FIX Arrow Click will failed on mobile device.
+  * Modify Default CSS.
 * v2.1.1 - Jan 19, 2015
   * FIX enableLoop true, let it will always show arrows.
   * ADD Vertical website Scrolling on slider.

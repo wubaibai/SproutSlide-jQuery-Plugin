@@ -4,13 +4,14 @@ SproutSlide-jQuery-Plugin
 SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
 
 ### Version
-* v2.1.0
+* v2.1.2
   * [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
   * [View the Sample](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
 
 ### Changelog
 
 * v2.1.2 - Jan 21, 2015
+  * FIX <a> Click will failed on mobile device.
   * FIX Arrow Click will failed on mobile device.
   * Modify Default CSS.
 * v2.1.1 - Jan 19, 2015

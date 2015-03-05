@@ -1,7 +1,7 @@
 /*--------------------------------------------
 * @ SproutSlide-jQuery-Plugin
-* @ version 2.1.2
-This is git testing
+* @ version 2.1.3
+* @ Download at https://github.com/wubaibai/SproutSlide-jQuery-Plugin/
 --------------------------------------------*/
 
 $.fn.hasAttr = function(name) {  
@@ -151,6 +151,8 @@ $.fn.sproutSlide = function(options) {
 						},function(){
 							slider.find('.sprout-arrow').fadeOut('fast');
 						});
+					} else {
+						slider.find('.sprout-arrow').hide();
 					}
 				} else {
 					if(enableDot){
@@ -158,6 +160,8 @@ $.fn.sproutSlide = function(options) {
 					}
 					if(enableArrow){
 						slider.find('.sprout-arrow').show();
+					} else {
+						slider.find('.sprout-arrow').hide();
 					}
 				}
 

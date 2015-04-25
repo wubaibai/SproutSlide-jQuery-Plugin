@@ -66,7 +66,7 @@
 				animateStyle: "fade",
 				width: 720,
 				duration:500,
-				autovalue:false,
+				autovalue:true,
 				interval:5000,
 				enableDot:true,
 				enableArrow:true,

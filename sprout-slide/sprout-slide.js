@@ -190,6 +190,7 @@ $.fn.sproutSlide = function(options) {
 			mainContent.swipe({
 				allowPageScroll:'auto',
 				// tap:function(event, target) {
+				// 	$(target).trigger('click');
 				// 	if($(target).parent('a').length != 0){
 				// 		var clickHref = $(target).parent('a').attr('href');
 				// 		var clickTarget = $(target).parent('a').attr('target');
@@ -200,9 +201,9 @@ $.fn.sproutSlide = function(options) {
 				// 		}
 				// 	}
 				// },
-				click: function(event, target) {
-                    $(target).trigger('click');
-                },
+				click:function(event, target) {
+					$(target).trigger('click');
+				},
 				swipe:function(event, direction, distance, duration, fingerCount) {
 					// alert("You swiped " + direction);  
 					if (direction == 'left'){
@@ -211,7 +212,7 @@ $.fn.sproutSlide = function(options) {
 						animateSlide('left');
 					}
 				},
-                excludedElements:"button, input, select, textarea, .noSwipe",
+				excludedElements:"button, input, select, textarea, .noSwipe",
 				threshold:75  	//Default is 75px, set to 0 for demo so any distance triggers swipe
 			});
 
@@ -269,6 +270,8 @@ $.fn.sproutSlide = function(options) {
 			function animateSlide(where){
 				//console.debug('last-loop'+animateLoop);
 				clearInterval(animateLoop);
+
+				if(settings.clickToNext){ mainContent.unbind("click",nextClick); }
 				slider.find('.sprout-next').unbind("click",nextClick);
 				slider.find('.sprout-prev').unbind("click",prevClick);
 				slider.find('.sprout-dots div').unbind("click",dotsClick);
@@ -364,6 +367,8 @@ $.fn.sproutSlide = function(options) {
 						slider.find('.sprout-next').bind("click",nextClick);
 						slider.find('.sprout-prev').bind("click",prevClick);
 						slider.find('.sprout-dots div').bind("click",dotsClick);
+
+						if(settings.clickToNext){ mainContent.bind("click",nextClick); }
 					});
 				} else if (animateStyle == 'fade'){
 					//Get Next Page;
@@ -400,6 +405,7 @@ $.fn.sproutSlide = function(options) {
 						slider.find('.sprout-next').bind("click",nextClick);
 						slider.find('.sprout-prev').bind("click",prevClick);
 						slider.find('.sprout-dots div').bind("click",dotsClick);
+						if(settings.clickToNext){ mainContent.bind("click",nextClick); }
 
 						if($.isFunction( settings.afterAnimate )){
 							settings.afterAnimate.call(this,slider,currentDot,pageNum);

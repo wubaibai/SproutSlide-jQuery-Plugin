@@ -221,12 +221,19 @@ $.fn.sproutSlide = function(options) {
 
 			function checkArrowDisplay(){
 				if(!enableLoop){
-					if(currentDot == 0){
+					var visualCurrent;
+					if (animateStyle == 'slide'){
+						visualCurrent = currentDot;
+					} else if (animateStyle == 'fade'){
+						visualCurrent = nextPage;
+					}
+
+					if(visualCurrent == 0){
 						slider.find('.sprout-prev').hide();
 					} else{
 						slider.find('.sprout-prev').show();
 					}
-					if(currentDot == pageNum-1){
+					if(visualCurrent == pageNum-1){
 						slider.find('.sprout-next').hide();
 					} else{
 						slider.find('.sprout-next').show();
@@ -374,8 +381,10 @@ $.fn.sproutSlide = function(options) {
 						nextPage = 0;
 					}
 
+					checkArrowDisplay();
+
 					if($.isFunction( settings.beforeAnimate )){
-						settings.beforeAnimate.call(this,slider,currentDot,pageNum);
+						settings.beforeAnimate.call(this,slider,nextPage,pageNum);
 					}
 
 					//取得現在 active 的點, 並且移除所有 active;
@@ -387,8 +396,7 @@ $.fn.sproutSlide = function(options) {
 
 					slider.find('.sprout-slide li').eq(currentDot).fadeOut(300).end().eq(nextPage).hide().fadeIn(duration, function(){
 						currentDot = nextPage;
-						checkArrowDisplay();
-
+						
 						slider.find('.sprout-next').bind("click",nextClick);
 						slider.find('.sprout-prev').bind("click",prevClick);
 						slider.find('.sprout-dots div').bind("click",dotsClick);

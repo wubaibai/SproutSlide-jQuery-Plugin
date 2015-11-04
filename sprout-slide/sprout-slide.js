@@ -15,6 +15,7 @@ $.fn.sproutSlide = function(options) {
 		var settings = $.extend({
 			animateStyle: "slide",
 			width: "auto",
+			height: "auto",
 			slideNum: 4,
 			duration:700,
 			autovalue:true,
@@ -52,6 +53,7 @@ $.fn.sproutSlide = function(options) {
 			} else {
 				width = parseInt(width)
 			}
+			var height = settings.height;
 			// slider.css('width', width); // MOD 1/21
 			slider.find('.sprout-slide-wrapper').css('width', width);
 
@@ -89,8 +91,12 @@ $.fn.sproutSlide = function(options) {
 				slider.find('.sprout-slide li').eq(0).css('display','block');
 
 				slider.delay(0).fadeIn(100,function(){
-					sliderH = slider.find('.sprout-slide li').eq(0).height();
-					mainContent.height(sliderH);
+					if(height != 'auto'){
+						mainContent.height(height);
+					} else {
+						sliderH = slider.find('.sprout-slide li').eq(0).height();
+						mainContent.height(sliderH);
+					}
 				});
 			}
 
@@ -175,46 +181,46 @@ $.fn.sproutSlide = function(options) {
 				if (autoplay) {
 					restartInterval();
 				};
-			}
 
-			//unbind 舊的 function, 解決：如果有重新叫同一個 sider 時出現的 duplicated function
-			if(settings.clickToNext){ 
-				mainContent.unbind("click").bind("click",nextClick);
-				mainContent.addClass('hasCursor');
-			}
-			slider.find('.sprout-next').unbind("click").bind("click",nextClick);
-			slider.find('.sprout-prev').unbind("click").bind("click",prevClick);
-			slider.find('.sprout-dots div').unbind("click").bind("click",dotsClick);
+				//unbind 舊的 function, 解決：如果有重新叫同一個 sider 時出現的 duplicated function
+				if(settings.clickToNext){ 
+					mainContent.unbind("click").bind("click",nextClick);
+					mainContent.addClass('hasCursor');
+				}
+				slider.find('.sprout-next').unbind("click").bind("click",nextClick);
+				slider.find('.sprout-prev').unbind("click").bind("click",prevClick);
+				slider.find('.sprout-dots div').unbind("click").bind("click",dotsClick);
 
-			//mobile touch slide
-			mainContent.swipe({
-				allowPageScroll:'auto',
-				// tap:function(event, target) {
-				// 	$(target).trigger('click');
-				// 	if($(target).parent('a').length != 0){
-				// 		var clickHref = $(target).parent('a').attr('href');
-				// 		var clickTarget = $(target).parent('a').attr('target');
-				// 		if(clickTarget == '_blank'){
-				// 			window.open(clickHref,clickTarget);
-				// 		} else {
-				// 			location.href = clickHref;
-				// 		}
-				// 	}
-				// },
-				click:function(event, target) {
-					$(target).trigger('click');
-				},
-				swipe:function(event, direction, distance, duration, fingerCount) {
-					// alert("You swiped " + direction);  
-					if (direction == 'left'){
-						animateSlide('right');
-					} else if (direction == 'right'){
-						animateSlide('left');
-					}
-				},
-				excludedElements:"button, input, select, textarea, .noSwipe",
-				threshold:75  	//Default is 75px, set to 0 for demo so any distance triggers swipe
-			});
+				//mobile touch slide
+				mainContent.swipe({
+					allowPageScroll:'auto',
+					// tap:function(event, target) {
+					// 	$(target).trigger('click');
+					// 	if($(target).parent('a').length != 0){
+					// 		var clickHref = $(target).parent('a').attr('href');
+					// 		var clickTarget = $(target).parent('a').attr('target');
+					// 		if(clickTarget == '_blank'){
+					// 			window.open(clickHref,clickTarget);
+					// 		} else {
+					// 			location.href = clickHref;
+					// 		}
+					// 	}
+					// },
+					click:function(event, target) {
+						$(target).trigger('click');
+					},
+					swipe:function(event, direction, distance, duration, fingerCount) {
+						// alert("You swiped " + direction);  
+						if (direction == 'left'){
+							animateSlide('right');
+						} else if (direction == 'right'){
+							animateSlide('left');
+						}
+					},
+					excludedElements:"button, input, select, textarea, .noSwipe",
+					threshold:75  	//Default is 75px, set to 0 for demo so any distance triggers swipe
+				});
+			}
 
 			if($.isFunction( settings.onInit )){
 				settings.onInit.call(this,slider,currentDot,pageNum);
@@ -396,8 +402,12 @@ $.fn.sproutSlide = function(options) {
 					slider.find('.sprout-dots div').removeClass('active');
 					slider.find('.sprout-dots div:eq('+nextPage+')').addClass('active');
 					
-					sliderH = slider.find('.sprout-slide li').eq(nextPage).height();
-					mainContent.animate({'height':sliderH},500);
+					if(height != 'auto'){
+						// mainContent.height(height);
+					} else {
+						sliderH = slider.find('.sprout-slide li').eq(nextPage).height();
+						mainContent.animate({'height':sliderH},500);
+					}
 
 					slider.find('.sprout-slide li').eq(currentDot).fadeOut(300).end().eq(nextPage).hide().fadeIn(duration, function(){
 						currentDot = nextPage;

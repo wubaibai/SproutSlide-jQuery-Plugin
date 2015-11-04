@@ -45,6 +45,7 @@
 			$('#slide1').sproutSlide({
 				animateStyle: "slide",
 				width: "auto",
+				height: "auto",
 				slideNum: 3,
 				duration:700,
 				autovalue:true,
@@ -65,6 +66,7 @@
 			$('#slide2').sproutSlide({
 				animateStyle: "fade",
 				width: 720,
+				height: "auto",
 				duration:500,
 				autovalue:true,
 				interval:5000,

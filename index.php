@@ -320,6 +320,14 @@ $('#slide2').sproutSlide({
 					</td>
 				</tr>
 				<tr>
+					<td>height</td>
+					<td>"auto"</td>
+					<td><p class="sumup">The height of slider contentm especially for 'fade' effect slide, if the image haven't load the height will be inncorrect, so you can use this setting to set height. </p>
+						<span class="blue">"auto"</span> : The Slider will fit container's height.<br/>
+						<span class="blue">digits</span> : The Slider will set to specific height.
+					</td>
+				</tr>
+				<tr>
 					<td>slideNum</td>
 					<td>4</td>
 					<td><p class="sumup">The li number per page</p>

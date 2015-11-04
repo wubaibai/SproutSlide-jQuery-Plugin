@@ -45,6 +45,7 @@
 			$('#slide1').sproutSlide({
 				animateStyle: "slide",
 				width: "auto",
+				height: "auto",
 				slideNum: 3,
 				duration:700,
 				autovalue:true,
@@ -65,6 +66,7 @@
 			$('#slide2').sproutSlide({
 				animateStyle: "fade",
 				width: 720,
+				height: "auto",
 				duration:500,
 				autovalue:true,
 				interval:5000,
@@ -315,6 +317,14 @@ $('#slide2').sproutSlide({
 					<td><p class="sumup">The width of slider content</p>
 						<span class="blue">"auto"</span> : The Slider will fit container's width.<br/>
 						<span class="blue">digits</span> : The Slider will set to specific width.
+					</td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td>"auto"</td>
+					<td><p class="sumup">The height of slider contentm especially for 'fade' effect slide, if the image haven't load the height will be inncorrect, so you can use this setting to set height. </p>
+						<span class="blue">"auto"</span> : The Slider will fit container's height.<br/>
+						<span class="blue">digits</span> : The Slider will set to specific height.
 					</td>
 				</tr>
 				<tr>

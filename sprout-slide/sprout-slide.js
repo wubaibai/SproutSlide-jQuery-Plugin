@@ -1,6 +1,6 @@
 /*--------------------------------------------
 * @ SproutSlide-jQuery-Plugin
-* @ version 2.1.3
+* @ version 2.1.6
 * @ Download at https://github.com/wubaibai/SproutSlide-jQuery-Plugin/
 --------------------------------------------*/
 
@@ -95,7 +95,14 @@ $.fn.sproutSlide = function(options) {
 						mainContent.height(height);
 					} else {
 						sliderH = slider.find('.sprout-slide li').eq(0).height();
-						mainContent.height(sliderH);
+						if(sliderH >= 2){
+							mainContent.height(sliderH);
+						}
+						
+						slider.find('.sprout-slide li').eq(0).load(function(){
+							sliderH = $(this).height();
+							mainContent.height(sliderH);
+						});
 					}
 				});
 			}
@@ -406,7 +413,15 @@ $.fn.sproutSlide = function(options) {
 						// mainContent.height(height);
 					} else {
 						sliderH = slider.find('.sprout-slide li').eq(nextPage).height();
-						mainContent.animate({'height':sliderH},500);
+
+						if(sliderH >= 2){
+							mainContent.animate({'height':sliderH},500);
+						}
+
+						slider.find('.sprout-slide li').eq(nextPage).load(function(){
+							sliderH = $(this).height();
+							mainContent.animate({'height':sliderH},500);
+						});
 					}
 
 					slider.find('.sprout-slide li').eq(currentDot).fadeOut(300).end().eq(nextPage).hide().fadeIn(duration, function(){

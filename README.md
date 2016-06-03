@@ -4,12 +4,13 @@ SproutSlide-jQuery-Plugin
 SproutSlide is a simple jQuery plugin, it is very easy to customize into yout website.
 
 ### Version
-* v2.1.5
+* v2.1.6
   * [Download SproutSlide-jQuery-Plugin](https://github.com/wubaibai/SproutSlide-jQuery-Plugin/archive/master.zip)
   * [View the Sample](http://lab.25sprout.com/SproutSlide-jQuery-Plugin/).
 
 ### Changelog
-
+* v2.1.6 - June 3, 2016
+  * 'fade' Style with a image load lately bug of slider height, will auto update height until image load.
 * v2.1.5 - Nov 4, 2015
   * ADD 'height' setting for cusomize Fade Effect Slider Height.
 * v2.1.4 - Apr 25, 2015

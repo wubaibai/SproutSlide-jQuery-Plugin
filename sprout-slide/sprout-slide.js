@@ -1,6 +1,6 @@
 /*--------------------------------------------
 * @ SproutSlide-jQuery-Plugin
-* @ version 2.1.6
+* @ version 2.1.7
 * @ Download at https://github.com/wubaibai/SproutSlide-jQuery-Plugin/
 --------------------------------------------*/
 
@@ -201,23 +201,7 @@ $.fn.sproutSlide = function(options) {
 				//mobile touch slide
 				mainContent.swipe({
 					allowPageScroll:'auto',
-					// tap:function(event, target) {
-					// 	$(target).trigger('click');
-					// 	if($(target).parent('a').length != 0){
-					// 		var clickHref = $(target).parent('a').attr('href');
-					// 		var clickTarget = $(target).parent('a').attr('target');
-					// 		if(clickTarget == '_blank'){
-					// 			window.open(clickHref,clickTarget);
-					// 		} else {
-					// 			location.href = clickHref;
-					// 		}
-					// 	}
-					// },
-					click:function(event, target) {
-						$(target).trigger('click');
-					},
 					swipe:function(event, direction, distance, duration, fingerCount) {
-						// alert("You swiped " + direction);  
 						if (direction == 'left'){
 							animateSlide('right');
 						} else if (direction == 'right'){
